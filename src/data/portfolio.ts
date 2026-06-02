@@ -2,7 +2,7 @@
 // ALL content lives here — components never hardcode strings
 
 export const portfolioData = {
-  name: "Karthikeyan Sivakumar",
+  name: "Karthikeyan S",
   initials: "KS",
   tagline: "Building production-grade software across mobile, web, and cloud.",
   roles: [
@@ -10,7 +10,7 @@ export const portfolioData = {
     "Cloud Engineer",
     "AI/ML Engineer",
   ],
-  email: "karthikeyan@example.com", // TODO: replace with actual email
+  email: "karthikeyansivakumar192005@gmail.com", // TODO: replace with actual email
   location: "Puducherry, India",
   github: "https://github.com/karthikeyans05",
   linkedin: "https://www.linkedin.com/in/karthikeyasiva/",
@@ -21,7 +21,7 @@ export const portfolioData = {
     stats: [
       { label: "Projects Built", value: "6+" },
       { label: "Tech Stacks", value: "10+" },
-      { label: "College Year", value: "2nd" },
+      { label: "College Year", value: "Final" },
       { label: "Graduation", value: "2027" },
     ],
   },
@@ -71,11 +71,11 @@ export const portfolioData = {
     {
       title: "Attend IQ",
       description:
-        "Smart attendance management system for educational institutions. Streamlines attendance tracking with intelligent insights and reporting, reducing manual overhead for faculty.",
-      tech: ["JavaScript", "Node.js", "MySQL"],
+        "Cloud-based smart attendance risk prediction system with GenAI chatbot and ML risk engine. Role-based access for Admin, Faculty, and HOD. Predicts at-risk students using a rule-based ML model (simulates Random Forest + XGBoost), visualizes 8-week trends and department-wise stats, and includes a Claude-powered chatbot for attendance insights with smart fallback.",
+      tech: ["React 18", "Node.js", "Express", "MongoDB", "Recharts", "Claude API", "JWT", "AWS"],
       github: "https://github.com/karthikeyans05/Attend_IQ",
       live: null,
-      badge: "Web App",
+      badge: "Cloud · GenAI · ML",
     },
     {
       title: "AI Chatbot",
