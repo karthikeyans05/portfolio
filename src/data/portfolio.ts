@@ -11,10 +11,10 @@ export const portfolioData = {
     "AI/ML Engineer",
   ],
   email: "karthikeyansivakumar192005@gmail.com", // TODO: replace with actual email
-  location: "Puducherry, India",
+  location: "Cuddalore, India",
   github: "https://github.com/karthikeyans05",
   linkedin: "https://www.linkedin.com/in/karthikeyasiva/",
-  resumeUrl: "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID", // TODO: upload to Drive
+  resumeUrl: "https://drive.google.com/uc?export=download&id=19jFY9zuQX9LmUA5wT5U4-z_pL3gRCHJQ",
 
   about: {
     bio: "I'm a Full Stack Developer passionate about building applications that solve real-world problems — from AI-powered Android safety systems to production-grade web platforms deployed with Docker on cloud infrastructure. My work spans Kotlin + ML Kit for on-device mobile intelligence, Java Spring Boot for robust backends, Node.js for rapid APIs, and React on the frontend. As a second-year student, I learn fastest by shipping real things.",
@@ -51,15 +51,6 @@ export const portfolioData = {
 
   projects: [
     {
-      title: "SafeDrive Vision",
-      description:
-        "Production-ready Android driver drowsiness monitoring app. Uses Google ML Kit Face Detection + CameraX to detect eye closure (2s) and head tilt (3s) in real-time, firing sound and vibration alerts. Fully offline — all ML inference runs on-device with zero network calls. Built with clean MVVM architecture.",
-      tech: ["Kotlin", "Android", "ML Kit", "CameraX", "TFLite", "MVVM"],
-      github: "https://github.com/karthikeyans05/SafeDriveApp",
-      live: null,
-      badge: "AI/ML · Mobile",
-    },
-    {
       title: "ExpenseFlow",
       description:
         "Full-stack expense tracking platform with category donut charts, monthly trend visualizations, budget alerts, and full-text search. REST API with complete CRUD, input validation on both frontend and backend, and Docker + Render deployment.",
@@ -78,6 +69,15 @@ export const portfolioData = {
       badge: "Cloud · GenAI · ML",
     },
     {
+      title: "SafeDrive Vision",
+      description:
+        "Production-ready Android driver drowsiness monitoring app. Uses Google ML Kit Face Detection + CameraX to detect eye closure (2s) and head tilt (3s) in real-time, firing sound and vibration alerts. Fully offline — all ML inference runs on-device with zero network calls. Built with clean MVVM architecture.",
+      tech: ["Kotlin", "Android", "ML Kit", "CameraX", "TFLite", "MVVM"],
+      github: "https://github.com/karthikeyans05/SafeDriveApp",
+      live: null,
+      badge: "AI/ML · Mobile",
+    },
+    {
       title: "AI Chatbot",
       description:
         "ChatGPT-style conversational AI web app. Node.js + Express backend integrates OpenRouter LLM API with MongoDB-persisted conversation history. Full-screen dark UI, keyboard shortcuts, and real-time AI responses.",
@@ -89,14 +89,14 @@ export const portfolioData = {
   ],
 
   experience: [
-    // Add internships here when available
-    // {
-    //   role: "Web Development Intern",
-    //   company: "Company Name",
-    //   duration: "Month Year – Month Year",
-    //   description: "What you built and what impact it had.",
-    //   type: "internship",
-    // },
+    {
+      role: "Generative AI Intern",
+      company: "Flaunch Technologies",
+      duration: "Sep 2024 – Oct 2024",
+      description:
+        "Part of the Flaunch Emerging Tech Internship program on Gen AI & XR, in collaboration with AICTE, NEAT, and 1M1B. Worked on real-world Generative AI projects, gained hands-on experience with open-source LLMs like LLaMA, and built portfolio projects alongside industry professionals.",
+      type: "internship",
+    },
   ],
 
   education: [

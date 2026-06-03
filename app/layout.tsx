@@ -13,11 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Karthikeyan Sivakumar — Full Stack Developer",
+  title: "Karthikeyan S — Full Stack Developer",
   description:
     "Full Stack Developer, Cloud Engineer & AI/ML Engineer. Building production-grade software across mobile, web, and cloud.",
   openGraph: {
-    title: "Karthikeyan Sivakumar",
+    title: "Karthikeyan S",
     description: "Full Stack Developer · Cloud Engineer · AI/ML Engineer",
     url: "https://karthikeyan.is-a.dev",
   },

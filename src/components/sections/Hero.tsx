@@ -6,15 +6,41 @@ import GradientText from "@/src/components/ui/GradientText";
 import { portfolioData } from "@/src/data/portfolio";
 
 export default function Hero() {
-  const [displayText, setDisplayText] = useState<string>(portfolioData.roles[0]);
+  const [displayText, setDisplayText] = useState<string>("");
 
   useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      index = (index + 1) % portfolioData.roles.length;
-      setDisplayText(portfolioData.roles[index]);
-    }, 2500);
-    return () => clearInterval(interval);
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let timeoutId: ReturnType<typeof setTimeout>;
+
+    const tick = () => {
+      const fullText = portfolioData.roles[roleIndex] as string;
+
+      if (isDeleting) {
+        charIndex--;
+        setDisplayText(fullText.substring(0, charIndex));
+        if (charIndex === 0) {
+          isDeleting = false;
+          roleIndex = (roleIndex + 1) % portfolioData.roles.length;
+          timeoutId = setTimeout(tick, 400);
+        } else {
+          timeoutId = setTimeout(tick, 55);
+        }
+      } else {
+        charIndex++;
+        setDisplayText(fullText.substring(0, charIndex));
+        if (charIndex === fullText.length) {
+          isDeleting = true;
+          timeoutId = setTimeout(tick, 1800);
+        } else {
+          timeoutId = setTimeout(tick, 110);
+        }
+      }
+    };
+
+    timeoutId = setTimeout(tick, 600);
+    return () => clearTimeout(timeoutId);
   }, []);
 
   const scrollDown = () => {
@@ -41,25 +67,13 @@ export default function Hero() {
         </div>
 
         <h1 className="text-6xl md:text-8xl font-bold tracking-tight leading-none mb-6">
-          <span className="block text-white">Karthikeyan</span>
-          <GradientText className="block">Sivakumar.</GradientText>
+          <span className="text-white">Karthikeyan </span><GradientText>S.</GradientText>
         </h1>
 
-        <p className="text-white/60 text-xl md:text-2xl font-light mb-6 flex items-center gap-1">
+        <p className="text-white/60 text-xl md:text-2xl font-light mb-10 flex items-center gap-1 min-h-[2rem]">
           {displayText}
           <span className="animate-cursor-blink inline-block w-0.5 h-6 bg-violet-400 align-middle" />
         </p>
-
-        <div className="flex flex-wrap gap-2 mb-10">
-          {portfolioData.roles.map((role) => (
-            <span
-              key={role}
-              className="rounded-full border border-white/10 px-3 py-1 text-sm text-white/60"
-            >
-              {role}
-            </span>
-          ))}
-        </div>
 
         <div className="flex flex-wrap gap-4">
           <a

@@ -14,7 +14,7 @@ export default function Education() {
           </span>
         </AnimatedSection>
 
-        <div className="flex flex-col gap-4 max-w-2xl">
+        <div className="flex flex-col gap-4 max-w-2xl mx-auto">
           {portfolioData.education.map((edu, i) => (
             <AnimatedSection key={edu.institution} delay={i * 0.1}>
               <GlassCard className="p-6">

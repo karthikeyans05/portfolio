@@ -20,30 +20,15 @@ export default function About() {
           </span>
         </AnimatedSection>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-          {portfolioData.about.stats.map((stat, i) => (
-            <AnimatedSection key={stat.label} delay={i * 0.1}>
-              <GlassCard className="p-6 text-center">
-                <div className="text-violet-400 text-3xl font-bold mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-white/50 text-xs uppercase tracking-wider">
-                  {stat.label}
-                </div>
-              </GlassCard>
-            </AnimatedSection>
-          ))}
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-12">
-          <AnimatedSection delay={0.2}>
+        <div className="grid md:grid-cols-2 gap-12 mb-16">
+          <AnimatedSection delay={0.1}>
             <h2 className="text-3xl font-bold mb-6">
               <GradientText>Who I Am</GradientText>
             </h2>
-            <p className="text-white/70 leading-relaxed">{portfolioData.about.bio}</p>
+            <p className="text-white/70 leading-relaxed text-justify">{portfolioData.about.bio}</p>
           </AnimatedSection>
 
-          <AnimatedSection delay={0.3}>
+          <AnimatedSection delay={0.2}>
             <div className="flex flex-col gap-4">
               {detailRows.map((row) => (
                 <div
@@ -62,6 +47,21 @@ export default function About() {
               ))}
             </div>
           </AnimatedSection>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {portfolioData.about.stats.map((stat, i) => (
+            <AnimatedSection key={stat.label} delay={i * 0.1}>
+              <GlassCard className="p-6 text-center">
+                <div className="text-violet-400 text-3xl font-bold mb-1">
+                  {stat.value}
+                </div>
+                <div className="text-white/50 text-xs uppercase tracking-wider">
+                  {stat.label}
+                </div>
+              </GlassCard>
+            </AnimatedSection>
+          ))}
         </div>
       </div>
     </section>
