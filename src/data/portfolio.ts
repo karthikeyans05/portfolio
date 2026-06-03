@@ -17,7 +17,7 @@ export const portfolioData = {
   resumeUrl: "https://drive.google.com/uc?export=download&id=19jFY9zuQX9LmUA5wT5U4-z_pL3gRCHJQ",
 
   about: {
-    bio: "I'm a Full Stack Developer passionate about building applications that solve real-world problems — from AI-powered Android safety systems to production-grade web platforms deployed with Docker on cloud infrastructure. My work spans Kotlin + ML Kit for on-device mobile intelligence, Java Spring Boot for robust backends, Node.js for rapid APIs, and React on the frontend. As a second-year student, I learn fastest by shipping real things.",
+    bio: "I'm a Full Stack Developer passionate about building applications that solve real-world problems — from AI-powered Android safety systems to production-grade web platforms deployed with Docker on cloud infrastructure. My work spans Kotlin + ML Kit for on-device mobile intelligence, Java Spring Boot for robust backends, Node.js for rapid APIs, and React on the frontend. I learn fastest by shipping real things.",
     stats: [
       { label: "Projects Built", value: "6+" },
       { label: "Tech Stacks", value: "10+" },
