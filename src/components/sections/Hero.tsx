@@ -60,38 +60,62 @@ export default function Hero() {
 
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-violet-600/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="relative max-w-6xl mx-auto w-full py-24">
-        <div className="inline-flex items-center gap-2 bg-violet-400/10 border border-violet-400/20 rounded-full px-4 py-1.5 text-sm text-violet-400 mb-8">
-          <span className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
-          Open to internships &amp; collaborations
+      <div className="relative max-w-6xl mx-auto w-full py-24 grid lg:grid-cols-2 lg:items-center gap-12">
+        {/* Left column */}
+        <div>
+          <div className="inline-flex items-center gap-2 bg-violet-400/10 border border-violet-400/20 rounded-full px-4 py-1.5 text-sm text-violet-400 mb-8">
+            <span className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
+            Open to internships &amp; collaborations
+          </div>
+
+          <h1 className="text-6xl md:text-8xl font-bold tracking-tight leading-none mb-6 whitespace-nowrap">
+            <span className="text-white">Karthikeyan </span><GradientText>S.</GradientText>
+          </h1>
+
+          <p className="text-white/60 text-xl md:text-2xl font-light mb-10 flex items-center gap-1 min-h-[2rem]">
+            {displayText}
+            <span className="animate-cursor-blink inline-block w-0.5 h-6 bg-violet-400 align-middle" />
+          </p>
+
+          <div className="flex flex-wrap gap-4">
+            <a
+              href={portfolioData.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-violet-400 hover:bg-violet-300 text-[#0f0a1a] font-semibold px-6 py-3 rounded-lg transition-colors"
+            >
+              View GitHub
+            </a>
+            <a
+              href={portfolioData.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-white/20 hover:border-violet-400/50 text-white/70 hover:text-white px-6 py-3 rounded-lg transition-all"
+            >
+              Download Resume
+            </a>
+          </div>
         </div>
 
-        <h1 className="text-6xl md:text-8xl font-bold tracking-tight leading-none mb-6">
-          <span className="text-white">Karthikeyan </span><GradientText>S.</GradientText>
-        </h1>
+        {/* Right column — monogram card, desktop only */}
+        <div className="hidden lg:flex justify-center items-center">
+          <div className="relative">
+            {/* Glow halo behind card */}
+            <div className="absolute inset-0 scale-150 bg-violet-500/15 blur-3xl rounded-full -z-10 pointer-events-none" />
 
-        <p className="text-white/60 text-xl md:text-2xl font-light mb-10 flex items-center gap-1 min-h-[2rem]">
-          {displayText}
-          <span className="animate-cursor-blink inline-block w-0.5 h-6 bg-violet-400 align-middle" />
-        </p>
+            {/* Card */}
+            <div className="relative w-56 h-40 bg-[#0f0a1a] border border-violet-400/20 rounded-2xl flex items-center justify-center overflow-hidden animate-float hover:scale-105 transition-transform duration-300">
+              {/* Letters */}
+              <span className="font-black text-7xl text-white tracking-tight select-none z-10">
+                SK
+              </span>
 
-        <div className="flex flex-wrap gap-4">
-          <a
-            href={portfolioData.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-violet-400 hover:bg-violet-300 text-[#0f0a1a] font-semibold px-6 py-3 rounded-lg transition-colors"
-          >
-            View GitHub
-          </a>
-          <a
-            href={portfolioData.resumeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border border-white/20 hover:border-violet-400/50 text-white/70 hover:text-white px-6 py-3 rounded-lg transition-all"
-          >
-            Download Resume
-          </a>
+              {/* Diagonal violet slash */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="w-[2px] h-[200%] bg-violet-400/75 rotate-45" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
